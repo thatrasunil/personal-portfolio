@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunil Thathra | Frontend Developer</title>
+    <meta name="description" content="Portfolio of Sunil Thathra, a Frontend Developer specializing in responsive, user-friendly, and modern web applications.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Three.js & Vanta.js for 3D World -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Gradient Animated Background -->
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#" class="logo">Sunil<span>.</span></a>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="container hero-container">
+                <div class="hero-content reveal fade-up">
+                    <span class="greeting">Hello, World!</span>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Sunil Thathra</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Frontend Developer | HTML • CSS • JavaScript</h2>
+                    <p class="hero-description">
+                        I build responsive, user-friendly, and modern web applications with a focus on exceptional user experiences and clean, elegant code.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="assets/Sunil-resume.docx" class="btn btn-outline" download>Download Resume <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+                
+                <div class="hero-3d-model reveal fade-in" id="vanta-canvas" style="transition-delay: 200ms;">
+                    <!-- 3D World Globe Animation Container -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section-title reveal fade-up">About Me</h2>
+                <div class="about-container reveal fade-up">
+                    <div class="about-text">
+                        <p>
+                            I am a passionate web developer focused on building responsive and interactive web applications using modern web technologies. I love transforming complex problems into simple, beautiful, and intuitive designs.
+                        </p>
+                    </div>
+                    
+                    <div class="about-cards">
+                        <div class="glass-card about-card">
+                            <i class="fab fa-html5 code-icon html-color"></i>
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="glass-card about-card">
+                            <i class="fab fa-css3-alt code-icon css-color"></i>
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="glass-card about-card">
+                            <i class="fab fa-js code-icon js-color"></i>
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div class="glass-card about-card">
+                            <i class="fas fa-mobile-alt code-icon responsive-color"></i>
+                            <h3>Responsive Design</h3>
+                        </div>
+                        <div class="glass-card about-card">
+                            <i class="fas fa-paint-brush code-icon ui-color"></i>
+                            <h3>UI Development</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section-title reveal fade-up">My Skills</h2>
+                <div class="skills-container reveal fade-in">
+                    
+                    <!-- Skill Item -->
+                    <div class="skill-item glass-card glow-on-hover">
+                        <div class="skill-header">
+                            <i class="fab fa-html5 skill-icon html-color"></i>
+                            <span class="skill-name">HTML5</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar html-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="skill-item glass-card glow-on-hover">
+                        <div class="skill-header">
+                            <i class="fab fa-css3-alt skill-icon css-color"></i>
+                            <span class="skill-name">CSS3</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar css-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="skill-item glass-card glow-on-hover">
+                        <div class="skill-header">
+                            <i class="fab fa-js skill-icon js-color"></i>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar js-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="skill-item glass-card glow-on-hover">
+                        <div class="skill-header">
+                            <i class="fab fa-git-alt skill-icon git-color"></i>
+                            <span class="skill-name">Git & GitHub</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar git-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="skill-item glass-card glow-on-hover">
+                        <div class="skill-header">
+                            <i class="fas fa-laptop-code skill-icon responsive-color"></i>
+                            <span class="skill-name">Responsive Web Design</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar responsive-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="skill-item glass-card glow-on-hover">
+                        <div class="skill-header">
+                            <i class="fas fa-palette skill-icon ui-color"></i>
+                            <span class="skill-name">UI Development</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar ui-bar"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section-title reveal fade-up">Featured Projects</h2>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card reveal fade-up">
+                        <div class="project-image placeholder-img">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">CodeConnect</h3>
+                            <p class="project-description">
+                                A modern developer collaboration platform designed to connect programmers. Built with pure frontend technologies focusing on an interactive user interface.
+                            </p>
+                            <ul class="project-tech">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card reveal fade-up" style="transition-delay: 100ms;">
+                        <div class="project-image placeholder-img">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Heal Ayur</h3>
+                            <p class="project-description">
+                                An innovative web platform that simulates an AI skin analyzer to recommend personalized Ayurvedic remedies based on user input and simulated analysis.
+                            </p>
+                            <ul class="project-tech">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Vanilla JS</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card reveal fade-up" style="transition-delay: 200ms;">
+                        <div class="project-image placeholder-img">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Invoice Generation System</h3>
+                            <p class="project-description">
+                                An automated, user-friendly invoice system custom-built for Sri Krishna Logistics to streamline billing processes and generate printable invoices dynamically.
+                            </p>
+                            <ul class="project-tech">
+                                <li>HTML</li>
+                                <li>CSS Print</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience section" id="experience">
+            <div class="container">
+                <h2 class="section-title reveal fade-up">Experience</h2>
+                
+                <div class="timeline reveal fade-in">
+                    <div class="timeline-item glass-card glow-border">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023 - Present</div>
+                        <h3 class="timeline-title">Web Developer</h3>
+                        <h4 class="timeline-company">Sri Krishna Logistics</h4>
+                        <p class="timeline-description">
+                            Built and maintained a web-based invoice generation system that significantly optimized the workflow, reducing manual billing work by 70%. Collaborated directly with stakeholders to ensure the application met business needs with a clean, intuitive interface.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section-title reveal fade-up">Get In Touch</h2>
+                
+                <div class="contact-container reveal fade-up">
+                    <div class="contact-info glass-card">
+                        <h3>Let's talk about everything!</h3>
+                        <p>Don't like forms? Send me an email. 👋</p>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:hello@example.com" class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <span>hello@example.com</span>
+                            </a>
+                            <a href="#" class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <span>India</span>
+                            </a>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form glass-card" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                            <label for="name" class="form-label">Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+                            <label for="email" class="form-label">Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" class="form-input form-textarea" placeholder="Your Message" required></textarea>
+                            <label for="message" class="form-label">Message</label>
+                            <div class="form-validation-msg" id="msg-error">Please enter a message.</div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; <span id="year">2026</span> Sunil Thathra. All rights reserved.</p>
+            <p class="footer-credit">Designed & Built with <i class="fas fa-heart" aria-hidden="true" style="color: #ff3b30;"></i> using HTML, CSS & JS.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
