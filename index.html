@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunil Thathra | Frontend Developer</title>
-    <meta name="description" content="Portfolio of Sunil Thathra, a Frontend Developer specializing in responsive, user-friendly, and modern web applications.">
+    <title>Sunil Thatra | Research & AI Student Portfolio</title>
+    <meta name="description" content="Personal portfolio of Sunil Thatra, a B.Tech Artificial Intelligence & Data Science student. Aspiring Google Student Researcher with experience in ML, NLP, and Full-Stack development.">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Three.js & Vanta.js for 3D World -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Gradient Animated Background -->
+    <!-- Canvas Particle Background -->
+    <canvas id="particles-canvas" class="bg-animation-canvas"></canvas>
+
+    <!-- Animated Ambient Gradient Background Orbs -->
     <div class="bg-animation">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Header / Navigation -->
     <header class="header">
         <nav class="navbar container">
             <a href="#" class="logo">Sunil<span>.</span></a>
@@ -35,9 +38,11 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
                     <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
                     <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                     <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#competencies" class="nav-link">Competencies</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
@@ -53,22 +58,35 @@
         <section class="hero section" id="home">
             <div class="container hero-container">
                 <div class="hero-content reveal fade-up">
-                    <span class="greeting">Hello, World!</span>
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Sunil Thathra</span>
-                    </h1>
-                    <h2 class="hero-subtitle">Frontend Developer | HTML • CSS • JavaScript</h2>
+                    <span class="greeting">Hi there, I'm</span>
+                    <h1 class="hero-title">Sunil <span class="gradient-text">Thatra</span></h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typing-text">AI & Data Science Student</span>
+                    </h2>
                     <p class="hero-description">
-                        I build responsive, user-friendly, and modern web applications with a focus on exceptional user experiences and clean, elegant code.
+                        B.Tech student in Artificial Intelligence & Data Science aiming to contribute to cutting-edge machine learning, NLP, and computer vision research as a Google Student Researcher.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="assets/Sunil-resume.docx" class="btn btn-outline" download>Download Resume <i class="fas fa-download"></i></a>
+                        <a href="#projects" class="btn btn-primary">Explore Research & Projects</a>
+                        <a href="assets/Sunil-resume.docx" class="btn btn-outline" download>
+                            Download CV <i class="fas fa-download" style="margin-left: 8px;"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <div class="hero-3d-model reveal fade-in" id="vanta-canvas" style="transition-delay: 200ms;">
-                    <!-- 3D World Globe Animation Container -->
+                <div class="hero-visual reveal fade-in">
+                    <div class="tech-card-globe glass-card">
+                        <div class="globe-inner">
+                            <i class="fas fa-brain brain-icon"></i>
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-ring delay-1"></div>
+                            <div class="pulse-ring delay-2"></div>
+                        </div>
+                        <div class="tech-tag tag-top"><span>Computer Vision</span></div>
+                        <div class="tech-tag tag-right"><span>Deep Learning</span></div>
+                        <div class="tech-tag tag-bottom"><span>Natural Language</span></div>
+                        <div class="tech-tag tag-left"><span>Data Science</span></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -77,35 +95,78 @@
         <section class="about section" id="about">
             <div class="container">
                 <h2 class="section-title reveal fade-up">About Me</h2>
-                <div class="about-container reveal fade-up">
-                    <div class="about-text">
+                <div class="about-grid">
+                    <div class="about-text reveal fade-up">
+                        <h3 class="gradient-text">Bridging AI Research & Software Engineering</h3>
                         <p>
-                            I am a passionate web developer focused on building responsive and interactive web applications using modern web technologies. I love transforming complex problems into simple, beautiful, and intuitive designs.
+                            I am currently pursuing my B.Tech in Artificial Intelligence & Data Science at Annamacharya Institute of Technology & Sciences (JNTUA), Tirupati. My interest lies in resolving complex real-world challenges through robust models and custom applications. 
                         </p>
+                        <p>
+                            I approach programming and ML model design with a hypothesis-driven mindset, actively studying Natural Language Understanding (NLU), Deep Learning, and Computer Vision. I am eager to apply these methodologies to Google Research initiatives.
+                        </p>
+                        <div class="relocation-badge glass-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Open to relocation to Bengaluru, Karnataka for Student Researcher engagement.</span>
+                        </div>
                     </div>
                     
-                    <div class="about-cards">
-                        <div class="glass-card about-card">
-                            <i class="fab fa-html5 code-icon html-color"></i>
-                            <h3>HTML</h3>
+                    <div class="stats-grid reveal fade-in">
+                        <div class="glass-card stat-card">
+                            <div class="stat-number" data-count="70" data-suffix="%">0%</div>
+                            <div class="stat-label">Workflow Automation Efficiency</div>
                         </div>
-                        <div class="glass-card about-card">
-                            <i class="fab fa-css3-alt code-icon css-color"></i>
-                            <h3>CSS</h3>
+                        <div class="glass-card stat-card">
+                            <div class="stat-number" data-count="3" data-suffix="+">0+</div>
+                            <div class="stat-label">Production & AI Projects</div>
                         </div>
-                        <div class="glass-card about-card">
-                            <i class="fab fa-js code-icon js-color"></i>
-                            <h3>JavaScript</h3>
-                        </div>
-                        <div class="glass-card about-card">
-                            <i class="fas fa-mobile-alt code-icon responsive-color"></i>
-                            <h3>Responsive Design</h3>
-                        </div>
-                        <div class="glass-card about-card">
-                            <i class="fas fa-paint-brush code-icon ui-color"></i>
-                            <h3>UI Development</h3>
+                        <div class="glass-card stat-card">
+                            <div class="stat-number" data-count="4" data-suffix="">0</div>
+                            <div class="stat-label">AI Research Areas Studied</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education section" id="education">
+            <div class="container">
+                <h2 class="section-title reveal fade-up">Education</h2>
+                <div class="education-timeline reveal fade-up">
+                    
+                    <!-- B.Tech -->
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-date">June 2024 – June 2028 (Expected)</div>
+                        <h3 class="edu-title">B.Tech in Artificial Intelligence & Data Science</h3>
+                        <h4 class="edu-institution">Annamacharya Institute of Technology & Sciences (JNTUA), Tirupati</h4>
+                        <p class="edu-details">
+                            Focusing on foundational computational intelligence. Relevant coursework: Machine Learning, Data Structures & Algorithms, Artificial Intelligence, Database Management Systems, Python Programming, and Computer Networks.
+                        </p>
+                    </div>
+
+                    <!-- Intermediate -->
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-date">2022 – 2024</div>
+                        <h3 class="edu-title">Intermediate (MPC)</h3>
+                        <h4 class="edu-institution">SDHR Junior College, Tirupati | BIEAP</h4>
+                        <p class="edu-details">
+                            Secured a score of <strong>79%</strong>, establishing mathematical foundations in Calculus, Algebra, and Physics.
+                        </p>
+                    </div>
+
+                    <!-- SSC -->
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-date">Completed 2021</div>
+                        <h3 class="edu-title">Secondary School Certificate (SSC)</h3>
+                        <h4 class="edu-institution">Sri Chaitanya EM High School, Gudur | Board of Secondary Education</h4>
+                        <p class="edu-details">
+                            Graduated with a score of <strong>85.3%</strong>.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -113,72 +174,61 @@
         <!-- Skills Section -->
         <section class="skills section" id="skills">
             <div class="container">
-                <h2 class="section-title reveal fade-up">My Skills</h2>
-                <div class="skills-container reveal fade-in">
+                <h2 class="section-title reveal fade-up">Technical Skills</h2>
+                <div class="skills-grid reveal fade-in">
                     
-                    <!-- Skill Item -->
-                    <div class="skill-item glass-card glow-on-hover">
-                        <div class="skill-header">
-                            <i class="fab fa-html5 skill-icon html-color"></i>
-                            <span class="skill-name">HTML5</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar html-bar"></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Item -->
-                    <div class="skill-item glass-card glow-on-hover">
-                        <div class="skill-header">
-                            <i class="fab fa-css3-alt skill-icon css-color"></i>
-                            <span class="skill-name">CSS3</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar css-bar"></div>
+                    <!-- Programming -->
+                    <div class="glass-card skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-terminal category-icon"></i> Programming
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript (ES6+)</span>
+                            <span class="skill-tag">C Language</span>
+                            <span class="skill-tag">SQL</span>
                         </div>
                     </div>
 
-                    <!-- Skill Item -->
-                    <div class="skill-item glass-card glow-on-hover">
-                        <div class="skill-header">
-                            <i class="fab fa-js skill-icon js-color"></i>
-                            <span class="skill-name">JavaScript</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar js-bar"></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Item -->
-                    <div class="skill-item glass-card glow-on-hover">
-                        <div class="skill-header">
-                            <i class="fab fa-git-alt skill-icon git-color"></i>
-                            <span class="skill-name">Git & GitHub</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar git-bar"></div>
+                    <!-- AI / ML & Research -->
+                    <div class="glass-card skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-brain category-icon"></i> AI & Data Science
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Image Processing</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">NLU</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Data Analysis</span>
                         </div>
                     </div>
 
-                    <!-- Skill Item -->
-                    <div class="skill-item glass-card glow-on-hover">
-                        <div class="skill-header">
-                            <i class="fas fa-laptop-code skill-icon responsive-color"></i>
-                            <span class="skill-name">Responsive Web Design</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar responsive-bar"></div>
+                    <!-- Web Technologies -->
+                    <div class="glass-card skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-globe category-icon"></i> Web Technologies
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5 & CSS3</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">Responsive Design</span>
                         </div>
                     </div>
 
-                    <!-- Skill Item -->
-                    <div class="skill-item glass-card glow-on-hover">
-                        <div class="skill-header">
-                            <i class="fas fa-palette skill-icon ui-color"></i>
-                            <span class="skill-name">UI Development</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar ui-bar"></div>
+                    <!-- Developer Tools -->
+                    <div class="glass-card skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-tools category-icon"></i> Developer Tools
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">Vercel</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Postman</span>
                         </div>
                     </div>
 
@@ -189,74 +239,96 @@
         <!-- Projects Section -->
         <section class="projects section" id="projects">
             <div class="container">
-                <h2 class="section-title reveal fade-up">Featured Projects</h2>
-                
+                <h2 class="section-title reveal fade-up">Featured Work & Projects</h2>
                 <div class="projects-grid">
-                    <!-- Project 1 -->
+                    
+                    <!-- Heal Ayur -->
                     <div class="project-card glass-card reveal fade-up">
-                        <div class="project-image placeholder-img">
-                            <i class="fas fa-code"></i>
+                        <div class="project-image-wrapper">
+                            <div class="project-mockup">
+                                <i class="fas fa-notes-medical project-mock-icon"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <span class="overlay-text">Ayurvedic AI Analysis</span>
+                            </div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">CodeConnect</h3>
+                            <h3 class="project-title">Heal Ayur – AI Skin & Injury Analyzer</h3>
                             <p class="project-description">
-                                A modern developer collaboration platform designed to connect programmers. Built with pure frontend technologies focusing on an interactive user interface.
+                                Built an AI-powered web application that analyzes skin conditions from uploaded images and recommends Ayurvedic remedies. Applies computer vision and human-computer interaction (HCI) concepts to digital healthcare workflows.
                             </p>
                             <ul class="project-tech">
-                                <li>HTML</li>
-                                <li>CSS</li>
+                                <li>Python</li>
+                                <li>Flask</li>
                                 <li>JavaScript</li>
+                                <li>Image Processing</li>
+                                <li>REST API</li>
                             </ul>
                             <div class="project-links">
-                                <a href="#" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com" target="_blank" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> Source
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
+                    <!-- CodeConnect -->
                     <div class="project-card glass-card reveal fade-up" style="transition-delay: 100ms;">
-                        <div class="project-image placeholder-img">
-                            <i class="fas fa-leaf"></i>
+                        <div class="project-image-wrapper">
+                            <div class="project-mockup">
+                                <i class="fas fa-users-cog project-mock-icon"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <span class="overlay-text">Developer Collaboration</span>
+                            </div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Heal Ayur</h3>
+                            <h3 class="project-title">CodeConnect – Collaboration Platform</h3>
                             <p class="project-description">
-                                An innovative web platform that simulates an AI skin analyzer to recommend personalized Ayurvedic remedies based on user input and simulated analysis.
+                                Architected and deployed a responsive platform enabling developers to share ideas and projects. Focused on modular, reusable UI components, seamless cross-device layouts, and continuous deployment workflows.
                             </p>
                             <ul class="project-tech">
                                 <li>HTML5</li>
                                 <li>CSS3</li>
-                                <li>Vanilla JS</li>
+                                <li>JavaScript</li>
+                                <li>Vercel</li>
+                                <li>REST API</li>
                             </ul>
                             <div class="project-links">
-                                <a href="#" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://codeconnect-s.vercel.app/" target="_blank" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 3 -->
+                    <!-- Invoice System -->
                     <div class="project-card glass-card reveal fade-up" style="transition-delay: 200ms;">
-                        <div class="project-image placeholder-img">
-                            <i class="fas fa-file-invoice-dollar"></i>
+                        <div class="project-image-wrapper">
+                            <div class="project-mockup">
+                                <i class="fas fa-file-invoice project-mock-icon"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <span class="overlay-text">Workflow Digitization</span>
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Invoice Generation System</h3>
                             <p class="project-description">
-                                An automated, user-friendly invoice system custom-built for Sri Krishna Logistics to streamline billing processes and generate printable invoices dynamically.
+                                Engineered a custom web-based invoice creator for Sri Krishna Logistics. Reduced monthly billing preparation time by 70%, digitized business logging steps, and automated clean client PDF generation.
                             </p>
                             <ul class="project-tech">
-                                <li>HTML</li>
-                                <li>CSS Print</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
                                 <li>JavaScript</li>
+                                <li>PDF Export</li>
                             </ul>
                             <div class="project-links">
-                                <a href="#" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <span class="badge badge-client">Sri Krishna Logistics</span>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -265,17 +337,56 @@
         <section class="experience section" id="experience">
             <div class="container">
                 <h2 class="section-title reveal fade-up">Experience</h2>
-                
-                <div class="timeline reveal fade-in">
-                    <div class="timeline-item glass-card glow-border">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2023 - Present</div>
-                        <h3 class="timeline-title">Web Developer</h3>
-                        <h4 class="timeline-company">Sri Krishna Logistics</h4>
-                        <p class="timeline-description">
-                            Built and maintained a web-based invoice generation system that significantly optimized the workflow, reducing manual billing work by 70%. Collaborated directly with stakeholders to ensure the application met business needs with a clean, intuitive interface.
-                        </p>
+                <div class="experience-timeline reveal fade-up">
+                    <div class="exp-item glass-card">
+                        <div class="exp-dot"></div>
+                        <div class="exp-date">Nov 2025 – Present</div>
+                        <h3 class="exp-role">Web Developer (Freelance)</h3>
+                        <h4 class="exp-company">Sri Krishna Logistics</h4>
+                        <ul class="exp-details">
+                            <li class="exp-detail-item">Engineered a web-based invoice generation system reducing manual document compilation times by 70%.</li>
+                            <li class="exp-detail-item">Designed responsive mobile-first billing layouts using HTML5, CSS3, and JavaScript, reducing data input error margins.</li>
+                            <li class="exp-detail-item">Implemented client-side PDF export scripts, automating invoicing routines and monthly business report updates.</li>
+                        </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies Section -->
+        <section class="competencies section" id="competencies">
+            <div class="container">
+                <h2 class="section-title reveal fade-up">Core Competencies</h2>
+                <div class="competencies-grid reveal fade-in">
+                    
+                    <!-- Research Skills -->
+                    <div class="glass-card competency-card">
+                        <div class="competency-icon"><i class="fas fa-search-dollar"></i></div>
+                        <h3 class="competency-title">Research Skills</h3>
+                        <p>Problem formulation, literature synthesis, hypothesis generation, and technical/scientific writing.</p>
+                    </div>
+
+                    <!-- Collaboration -->
+                    <div class="glass-card competency-card">
+                        <div class="competency-icon"><i class="fas fa-users"></i></div>
+                        <h3 class="competency-title">Collaboration</h3>
+                        <p>Cross-functional teamwork, Agile methodologies, and an open-source contribution mindset.</p>
+                    </div>
+
+                    <!-- Communication -->
+                    <div class="glass-card competency-card">
+                        <div class="competency-icon"><i class="fas fa-comments"></i></div>
+                        <h3 class="competency-title">Communication</h3>
+                        <p>Writing technical documentations, translating complex AI designs to stakeholders, and presentation skills.</p>
+                    </div>
+
+                    <!-- Learning Agility -->
+                    <div class="glass-card competency-card">
+                        <div class="competency-icon"><i class="fas fa-seedling"></i></div>
+                        <h3 class="competency-title">Learning Agility</h3>
+                        <p>Self-directed study patterns, quick framework adoption, and adaptability in fast-paced research environments.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -285,26 +396,33 @@
             <div class="container">
                 <h2 class="section-title reveal fade-up">Get In Touch</h2>
                 
-                <div class="contact-container reveal fade-up">
+                <div class="contact-grid reveal fade-up">
                     <div class="contact-info glass-card">
-                        <h3>Let's talk about everything!</h3>
-                        <p>Don't like forms? Send me an email. 👋</p>
+                        <h3 class="gradient-text">Let's Connect</h3>
+                        <p>Are you looking for a dedicated student researcher, developer, or want to discuss machine learning applications? Reach out directly!</p>
                         
                         <div class="contact-methods">
-                            <a href="mailto:hello@example.com" class="contact-method">
+                            <a href="mailto:thatrasunil@gmail.com" class="contact-method">
                                 <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                                <span>hello@example.com</span>
+                                <span>thatrasunil@gmail.com</span>
                             </a>
-                            <a href="#" class="contact-method">
+                            <a href="tel:+919398542837" class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                                <span>+91 9398542837</span>
+                            </a>
+                            <div class="contact-method">
                                 <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                <span>India</span>
-                            </a>
+                                <span>Tirupati, Andhra Pradesh, India (Open to Bengaluru Relocation)</span>
+                            </div>
                         </div>
                         
                         <div class="social-links">
-                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/in/sunil-t-39a905315" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -322,12 +440,12 @@
                         <div class="form-group">
                             <textarea id="message" class="form-input form-textarea" placeholder="Your Message" required></textarea>
                             <label for="message" class="form-label">Message</label>
-                            <div class="form-validation-msg" id="msg-error">Please enter a message.</div>
+                            <div class="form-validation-msg" id="msg-error">Please fill in this field.</div>
                         </div>
                         
                         <button type="submit" class="btn btn-primary submit-btn">
                             <span>Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
+                            <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
                         </button>
                     </form>
                 </div>
@@ -338,8 +456,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
-            <p class="copyright">&copy; <span id="year">2026</span> Sunil Thathra. All rights reserved.</p>
-            <p class="footer-credit">Designed & Built with <i class="fas fa-heart" aria-hidden="true" style="color: #ff3b30;"></i> using HTML, CSS & JS.</p>
+            <p class="copyright">&copy; <span id="year">2026</span> Sunil Thatra. All rights reserved.</p>
+            <p class="footer-credit">Designed &amp; Developed with <i class="fas fa-heart" style="color: #6366f1;"></i> targeting Google Research engagements.</p>
         </div>
     </footer>
 
