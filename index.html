@@ -195,53 +195,6 @@
           color: var(--clr-text-primary);
         }
 
-        /* Skills Categories Grid */
-        .skills-categories-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 24px;
-          margin-top: 40px;
-        }
-
-        .skills-category-card {
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid var(--glass-border);
-          border-radius: var(--radius-card);
-          padding: 24px;
-          transition: all 0.3s ease;
-        }
-
-        .skills-category-card:hover {
-          border-color: rgba(99, 102, 241, 0.3);
-          box-shadow: 0 10px 25px rgba(99, 102, 241, 0.1);
-          transform: translateY(-5px);
-        }
-
-        .skills-category-title {
-          font-family: var(--font-heading);
-          font-size: 1.1rem;
-          font-weight: 600;
-          color: var(--clr-text-primary);
-          margin-bottom: 18px;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .skills-category-title i {
-          color: #10b981;
-        }
-
-        .skill-tag {
-          display: inline-flex !important;
-          align-items: center;
-          gap: 8px;
-        }
-
-        .skill-tag i {
-          font-size: 1rem;
-        }
-
         /* Featured Project Card Styles */
         .featured-project-card {
           grid-column: 1 / -1;
@@ -770,10 +723,13 @@
         <section class="skills section" id="skills">
             <div class="container">
                 <h2 class="section-title reveal fade-up">Technical Skills</h2>
-                <div class="skills-categories-grid">
+                <div class="skills-grid">
                     <!-- Languages -->
-                    <div class="skills-category-card glass-card reveal fade-up">
-                        <h3 class="skills-category-title"><i class="fas fa-terminal"></i> Languages</h3>
+                    <div class="skill-category glass-card reveal fade-up">
+                        <h3 class="category-title">
+                            <div class="category-icon"><i class="fas fa-terminal"></i></div>
+                            Languages
+                        </h3>
                         <div class="skill-tags">
                             <span class="skill-tag"><i class="devicon-python-plain colored"></i> Python</span>
                             <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
@@ -783,8 +739,11 @@
                     </div>
                     
                     <!-- Frontend -->
-                    <div class="skills-category-card glass-card reveal fade-up" style="transition-delay: 50ms;">
-                        <h3 class="skills-category-title"><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skill-category glass-card reveal fade-up" style="transition-delay: 50ms;">
+                        <h3 class="category-title">
+                            <div class="category-icon"><i class="fas fa-laptop-code"></i></div>
+                            Frontend
+                        </h3>
                         <div class="skill-tags">
                             <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
                             <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
@@ -795,8 +754,11 @@
                     </div>
                     
                     <!-- Backend -->
-                    <div class="skills-category-card glass-card reveal fade-up" style="transition-delay: 100ms;">
-                        <h3 class="skills-category-title"><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-category glass-card reveal fade-up" style="transition-delay: 100ms;">
+                        <h3 class="category-title">
+                            <div class="category-icon"><i class="fas fa-server"></i></div>
+                            Backend
+                        </h3>
                         <div class="skill-tags">
                             <span class="skill-tag"><i class="devicon-flask-original" style="color: #fff;"></i> Flask</span>
                             <span class="skill-tag"><i class="devicon-django-plain colored"></i> Django</span>
@@ -806,8 +768,11 @@
                     </div>
                     
                     <!-- Database & Cloud -->
-                    <div class="skills-category-card glass-card reveal fade-up" style="transition-delay: 150ms;">
-                        <h3 class="skills-category-title"><i class="fas fa-cloud"></i> Database &amp; Cloud</h3>
+                    <div class="skill-category glass-card reveal fade-up" style="transition-delay: 150ms;">
+                        <h3 class="category-title">
+                            <div class="category-icon"><i class="fas fa-cloud"></i></div>
+                            Database &amp; Cloud
+                        </h3>
                         <div class="skill-tags">
                             <span class="skill-tag"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
                             <span class="skill-tag"><i class="devicon-firebase-plain colored"></i> Firebase</span>
@@ -818,8 +783,11 @@
                     </div>
                     
                     <!-- Data Science -->
-                    <div class="skills-category-card glass-card reveal fade-up" style="transition-delay: 200ms;">
-                        <h3 class="skills-category-title"><i class="fas fa-brain"></i> Data Science</h3>
+                    <div class="skill-category glass-card reveal fade-up" style="transition-delay: 200ms;">
+                        <h3 class="category-title">
+                            <div class="category-icon"><i class="fas fa-brain"></i></div>
+                            Data Science
+                        </h3>
                         <div class="skill-tags">
                             <span class="skill-tag"><i class="devicon-pandas-plain colored"></i> Pandas</span>
                             <span class="skill-tag"><i class="devicon-numpy-plain colored"></i> NumPy</span>
