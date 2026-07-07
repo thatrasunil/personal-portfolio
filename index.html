@@ -645,6 +645,7 @@
                     <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#terminal" class="nav-link">Terminal</a></li>
                     <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                     <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
                     <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
@@ -825,6 +826,42 @@
                             <span class="skill-tag"><i class="devicon-scikit-learn-plain colored"></i> Scikit-learn</span>
                             <span class="skill-tag"><i class="devicon-matplotlib-plain colored"></i> Matplotlib</span>
                             <span class="skill-tag"><i class="fas fa-wand-magic-sparkles" style="color: #f59e0b;"></i> Prompt Eng.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terminal Section -->
+        <section class="terminal-section section" id="terminal">
+            <div class="container">
+                <h2 class="section-title reveal fade-up">Interactive Terminal</h2>
+                <p class="reveal fade-up" style="text-align: center; color: var(--clr-text-secondary); margin-top: -30px; margin-bottom: 40px; font-size: 1.05rem;">
+                    Type commands in the interactive console below to explore my profile. (Try typing <span class="gradient-text" style="font-weight: 600;">help</span>, <span class="gradient-text" style="font-weight: 600;">neofetch</span> or <span class="gradient-text" style="font-weight: 600;">matrix</span>!)
+                </p>
+                
+                <div class="terminal-window glass-card reveal fade-in">
+                    <canvas id="matrix-rain-canvas" class="matrix-canvas"></canvas>
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">guest@sunilthatra:~</div>
+                        <div class="terminal-action-icons">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                    </div>
+                    <div class="terminal-body" id="terminalBody">
+                        <div class="terminal-output">
+                            <p class="term-green">Welcome to Sunil's Interactive Terminal v1.0.0</p>
+                            <p class="term-muted">Type <span class="term-highlight">help</span> to view all available commands.</p>
+                            <br>
+                        </div>
+                        <div class="terminal-input-line">
+                            <span class="terminal-prompt">guest@sunilthatra:~$</span>
+                            <input type="text" id="terminalInput" autocomplete="off" placeholder="type a command...">
                         </div>
                     </div>
                 </div>

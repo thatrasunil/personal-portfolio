@@ -651,7 +651,189 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
 
     // ══════════════════════════════════════════════════════════════════════
-    // 10. PAGE LOADING TRANSITION TRIGGER
+    // 10. INTERACTIVE DEVELOPER TERMINAL PLAYGROUND
+    // ══════════════════════════════════════════════════════════════════════
+    const initDeveloperTerminal = () => {
+        const termInput = document.getElementById('terminalInput');
+        const termBody = document.getElementById('terminalBody');
+        const matrixCanvas = document.getElementById('matrix-rain-canvas');
+        if (!termInput || !termBody || !matrixCanvas) return;
+
+        let matrixInterval = null;
+
+        const printLine = (text, className = '') => {
+            const p = document.createElement('p');
+            if (className) p.className = className;
+            p.innerHTML = text;
+            const inputLine = termBody.querySelector('.terminal-input-line');
+            if (inputLine) {
+                termBody.insertBefore(p, inputLine);
+            } else {
+                termBody.appendChild(p);
+            }
+            termBody.scrollTop = termBody.scrollHeight;
+        };
+
+        const handleTerminalCommand = (rawInput) => {
+            const command = rawInput.trim().toLowerCase();
+            if (!command) return;
+
+            printLine(`guest@sunilthatra:~$ ${rawInput}`, 'term-blue');
+
+            switch (command) {
+                case 'help':
+                    printLine('Available commands:', 'term-yellow');
+                    printLine('  <span class="term-green">about</span>:    Short background story');
+                    printLine('  <span class="term-green">skills</span>:   List core developer skillsets with metrics');
+                    printLine('  <span class="term-green">projects</span>: Key products built (Saarthi, etc.)');
+                    printLine('  <span class="term-green">neofetch</span>: System configuration & academic info');
+                    printLine('  <span class="term-green">matrix</span>:   Toggle falling digital code canvas');
+                    printLine('  <span class="term-green">secret</span>:   Developer easter egg');
+                    printLine('  <span class="term-green">clear</span>:    Clear output logs');
+                    break;
+                case 'clear':
+                    const outputs = termBody.querySelectorAll('.terminal-output p, .terminal-output br, p, br');
+                    outputs.forEach(el => {
+                        if (!el.parentElement.classList.contains('terminal-input-line') && el.id !== 'terminalInput') {
+                            el.remove();
+                        }
+                    });
+                    break;
+                case 'about':
+                    printLine('Sunil Thatra - AI & Full-Stack Developer', 'term-cyan');
+                    printLine('----------------------------------------', 'term-muted');
+                    printLine('I enjoy translating ideas into real digital products. My core focus is building applications leveraging computational intelligence, next-gen databases, and responsive web technologies. Currently working on Saarthi.');
+                    break;
+                case 'skills':
+                    printLine('Core Competencies & Metrics:', 'term-cyan');
+                    printLine('----------------------------', 'term-muted');
+                    printLine('Programming      [██████████████████░░] 90% (Python, JS, TS, SQL)', 'term-green');
+                    printLine('Frontend         [██████████████████░░] 90% (React, Next.js, Tailwind)', 'term-green');
+                    printLine('Backend          [████████████████░░░░] 80% (Flask, Django, Node.js)', 'term-green');
+                    printLine('Database/Cloud   [███████████████░░░░░] 75% (PostgreSQL, AWS, GCP)', 'term-green');
+                    printLine('Data Science     [████████████████░░░░] 80% (Pandas, ML, Prompt Eng.)', 'term-green');
+                    break;
+                case 'projects':
+                    printLine('Featured Projects:', 'term-cyan');
+                    printLine('------------------', 'term-muted');
+                    printLine('1. <span class="term-highlight">Saarthi</span> - AI Travel OS (Next.js, Supabase, Gemini API)');
+                    printLine('2. <span class="term-highlight">Heal Ayur</span> - AI Skin Analyzer (Flask, Firebase, Image Proc)');
+                    printLine('3. <span class="term-highlight">CodeConnect</span> - Collab Platform (Firebase, JS)');
+                    printLine('4. <span class="term-highlight">Logistics Invoice</span> - Billing system (70% time saved)');
+                    break;
+                case 'neofetch':
+                    printLine(`   <span class="term-green">.-/+oossssoo+/-.</span>               <span class="term-green">sunil@LAPTOP-Device</span>`, 'term-green');
+                    printLine(` <span class="term-green">\`:+ssssssssssssssssss:\`</span>            ------------------`, 'term-green');
+                    printLine(` <span class="term-green">-+ssssssssssssssssssyys+-</span>           OS: Windows 11 / B.Tech AI & DS`, 'term-green');
+                    printLine(` <span class="term-green">.ossssssssssssssssssdMMMNys.</span>         Host: Annamacharya Institute (AITS)`, 'term-green');
+                    printLine(` <span class="term-green">-ysssssssssssydMMMMMMMMMMMMys.</span>       CGPA: 8.53 / 10`, 'term-green');
+                    printLine(` <span class="term-green">\`ysssssssssssmMMMMMMMMMMMMMMMMys\`</span>     Role: AI & Full-Stack Developer`, 'term-green');
+                    printLine(` <span class="term-green">-yssssssssssdMMMMMMMMMMMMMMMMMMys-</span>    Status: Open to Opportunities`, 'term-green');
+                    printLine(` <span class="term-green">.ossssssssssNMMMMMMMMMMMMMMMMMMys.</span>    Target: Google / AI Startups`, 'term-green');
+                    printLine(`  <span class="term-green">-ysssssssssmMMMMMMMMMMMMMMMMys.</span>      GitHub: github.com/thatrasunil`, 'term-green');
+                    printLine(`   <span class="term-green">-+sssssssssdMMMMMMMMMMMMys+-</span>        Uptime: 2 Years Coding`, 'term-green');
+                    printLine(`     <span class="term-green">\`:+ssssssssssyysssssss:\`</span>`, 'term-green');
+                    printLine(`       <span class="term-green">.-/+oossssoo+/-.</span>`, 'term-green');
+                    break;
+                case 'matrix':
+                    if (matrixInterval) {
+                        stopMatrixRain();
+                        printLine('Matrix Code deactivated.', 'term-muted');
+                    } else {
+                        startMatrixRain();
+                        printLine('Matrix Code rain activated! Click terminal screen to deactivate.', 'term-green');
+                    }
+                    break;
+                case 'secret':
+                    printLine(' _____ _                 _', 'term-cyan');
+                    printLine('|  ___| |               | |', 'term-cyan');
+                    printLine('| |__ | |__   ___   ___ | | __ _ _   _', 'term-cyan');
+                    printLine('|  __|| \'_ \\ / _ \\ / _ \\| |/ _` | | | |', 'term-cyan');
+                    printLine('| |___| | | | (_) | (_) | | (_| | |_| |', 'term-cyan');
+                    printLine('\\____/|_| |_|\\___/ \\___/|_|\\__, |\\__,_|', 'term-cyan');
+                    printLine('                            __/ |', 'term-cyan');
+                    printLine('                           |___/', 'term-cyan');
+                    printLine('"Always build products that solve real problems!"', 'term-yellow');
+                    break;
+                default:
+                    printLine(`Command not found: ${command}. Type <span class="term-highlight">help</span> for assistance.`, 'term-error');
+                    break;
+            }
+        };
+
+        const startMatrixRain = () => {
+            const ctx = matrixCanvas.getContext('2d');
+            const termRect = matrixCanvas.parentElement.getBoundingClientRect();
+            matrixCanvas.width = termRect.width;
+            matrixCanvas.height = termRect.height || 380;
+
+            const letters = "0101010101ABCDEFGHIJKLMNOPQRSTUVWXYZ💻🧠⚡";
+            const alphabet = letters.split("");
+
+            const fontSize = 12;
+            const columns = matrixCanvas.width / fontSize;
+
+            const rainDrops = [];
+            for (let x = 0; x < columns; x++) {
+                rainDrops[x] = 1;
+            }
+
+            const draw = () => {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+
+                ctx.fillStyle = '#10b981';
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < rainDrops.length; i++) {
+                    const text = alphabet[Math.floor(Math.random() * alphabet.length)];
+                    ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                    if (rainDrops[i] * fontSize > matrixCanvas.height && Math.random() > 0.975) {
+                        rainDrops[i] = 0;
+                    }
+                    rainDrops[i]++;
+                }
+            };
+
+            matrixCanvas.classList.add('active');
+            matrixInterval = setInterval(draw, 33);
+        };
+
+        const stopMatrixRain = () => {
+            if (matrixInterval) {
+                clearInterval(matrixInterval);
+                matrixInterval = null;
+            }
+            matrixCanvas.classList.remove('active');
+            const ctx = matrixCanvas.getContext('2d');
+            ctx.clearRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+        };
+
+        termInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const val = termInput.value;
+                handleTerminalCommand(val);
+                termInput.value = '';
+            }
+        });
+
+        const termWin = document.querySelector('.terminal-window');
+        if (termWin) {
+            termWin.addEventListener('click', () => {
+                if (matrixCanvas.classList.contains('active')) {
+                    stopMatrixRain();
+                    printLine('guest@sunilthatra:~$ matrix', 'term-blue');
+                    printLine('Matrix Code deactivated.', 'term-muted');
+                }
+                termInput.focus();
+            });
+        }
+    };
+    initDeveloperTerminal();
+
+    // ══════════════════════════════════════════════════════════════════════
+    // 11. PAGE LOADING TRANSITION TRIGGER
     // ══════════════════════════════════════════════════════════════════════
     setTimeout(() => {
         document.body.classList.add('loaded');
