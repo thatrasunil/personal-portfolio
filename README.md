@@ -32,7 +32,7 @@ Includes an in-browser mock console (`guest@sunilthatra:~$`) designed to print s
 * `help` - Show list of commands
 * `about` - Overview of Sunil's development guidelines
 * `skills` - Render ASCII progress bars showing competency levels
-* `projects` - Highlights of Saarthi, Heal Ayur, and CodeConnect
+* `projects` - Highlights of Saarthi, TaxBee, Heal Ayur, and CodeConnect
 * `neofetch` - Custom B.Tech student status & target specs card
 * `matrix` - Toggles falling green digital rain canvas animation!
 * `secret` - Unlocks easter egg ASCII art
@@ -53,6 +53,13 @@ Draws floating connected points across the entire screen, responsive to mouse co
 > *AI-Powered Destination OS for Travelers*
 - **Stack**: Next.js, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Gemini API
 - **Features**: AI Trip Planner, Live Crowd Updates, Temple Information, Offline-first Regional Navigator
+
+### 🐝 TaxBee Solutions
+> *Fast, Accurate & Stress-Free Online ITR Filing in India*
+- **Stack**: React, JavaScript, Firebase (Auth/Hosting), Vercel
+- **Features**: 15-minute ITR Filing Wizard, ClearTax Alternative Layout, Expert Assistance Pipelines
+- **Source Code**: [GitHub Repository](https://github.com/thatrasunil/taxbee)
+- **Live URL**: [TaxBee Live](https://taxbee-sigma.vercel.app)
 
 ### 🩹 Heal Ayur
 > *AI Skin Condition & Injury Analyzer*

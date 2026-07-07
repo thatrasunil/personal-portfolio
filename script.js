@@ -717,9 +717,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     printLine('Featured Projects:', 'term-cyan');
                     printLine('------------------', 'term-muted');
                     printLine('1. <span class="term-highlight">Saarthi</span> - AI Travel OS (Next.js, Supabase, Gemini API)');
-                    printLine('2. <span class="term-highlight">Heal Ayur</span> - AI Skin Analyzer (Flask, Firebase, Image Proc)');
-                    printLine('3. <span class="term-highlight">CodeConnect</span> - Collab Platform (Firebase, JS)');
-                    printLine('4. <span class="term-highlight">Logistics Invoice</span> - Billing system (70% time saved)');
+                    printLine('2. <span class="term-highlight">TaxBee Solutions</span> - Online ITR Filing Platform (React, Firebase)');
+                    printLine('3. <span class="term-highlight">Heal Ayur</span> - AI Skin Analyzer (Flask, Firebase, Image Proc)');
+                    printLine('4. <span class="term-highlight">CodeConnect</span> - Collab Platform (Firebase, JS)');
+                    printLine('5. <span class="term-highlight">Logistics Invoice</span> - Billing system (70% time saved)');
                     break;
                 case 'neofetch':
                     printLine(`   <span class="term-green">.-/+oossssoo+/-.</span>               <span class="term-green">sunil@LAPTOP-Device</span>`, 'term-green');
